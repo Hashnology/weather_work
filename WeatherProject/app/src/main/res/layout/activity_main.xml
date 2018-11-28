@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center">
+
+        <LinearLayout
+            android:id="@+id/llZipCode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_25sdp"
+            android:layout_marginRight="@dimen/_25sdp"
+            android:gravity="center_vertical"
+            android:weightSum="10">
+
+            <EditText
+                android:id="@+id/etZipCode"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="8"
+                android:background="@drawable/edit_text_background"
+                android:gravity="center"
+                android:hint="Enter Zip Code"
+                android:imeOptions="actionDone"
+                android:inputType="text"
+                android:maxLines="1"
+                android:padding="@dimen/_5sdp"
+                android:textColor="#233e9f"
+                android:textColorHint="@color/dark_blue"
+                android:textSize="@dimen/_25sdp" />
+
+            <Button
+                android:id="@+id/btnZipGo"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:onClick="loadZip"
+                android:text="Go"
+                android:textSize="@dimen/_20sdp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llCityCode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/llZipCode"
+            android:layout_marginLeft="@dimen/_25sdp"
+            android:layout_marginTop="@dimen/_25sdp"
+            android:layout_marginRight="@dimen/_25sdp"
+            android:gravity="center_vertical"
+            android:weightSum="10">
+
+            <EditText
+                android:id="@+id/etCity"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="8"
+                android:background="@drawable/edit_text_background"
+                android:gravity="center"
+                android:hint="Enter City"
+                android:imeOptions="actionDone"
+                android:inputType="text"
+                android:maxLines="1"
+                android:padding="@dimen/_5sdp"
+                android:textColor="#233e9f"
+                android:textColorHint="@color/dark_blue"
+                android:textSize="@dimen/_25sdp" />
+
+            <Button
+                android:id="@+id/btnCityGo"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:onClick="loadCity"
+                android:text="Go"
+                android:textSize="@dimen/_20sdp" />
+
+        </LinearLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/llCityCode"
+            android:layout_marginLeft="@dimen/_25sdp"
+            android:layout_marginTop="@dimen/_25sdp"
+            android:layout_marginRight="@dimen/_25sdp"
+            android:background="@color/dark_blue"
+            android:onClick="openDatabase"
+            android:text="Previous Record"
+            android:textColor="#fff"
+            android:textSize="@dimen/_25sdp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/containerFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></RelativeLayout>
+
+</RelativeLayout>
